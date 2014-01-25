@@ -10,3 +10,6 @@
           event
           derefed-start-time
           handle-time))
+
+(defn last-message-str [_ derefed-last-message]
+  (format "last-messages %s saved in s.state" derefed-last-message))

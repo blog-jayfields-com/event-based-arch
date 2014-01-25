@@ -10,5 +10,6 @@
   (subscribe :main/start println e.transform/start-str)
   (subscribe :s.state/start-time println
              e.transform/start-time-str @s.state/start-time (System/currentTimeMillis))
+  (subscribe :s.state/last-message println e.transform/last-message-str @s.state/last-message)
   (subscribe :m/webbit-message println identity)
   (subscribe :m/webbit-message e.webbit/send-message identity))
